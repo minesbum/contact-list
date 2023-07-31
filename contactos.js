@@ -21,7 +21,7 @@ let contactos = [
     telefono: "987654321",
     ubicaciones: {
       ciudad: "Guadalajara",
-      direccion: "Avenida GGG, Colonia 456"
+      direccion: "Avenida XYZ, Colonia 456"
     }
   },
   {
@@ -31,20 +31,21 @@ let contactos = [
     telefono: "555555555",
     ubicaciones: {
       ciudad: "Monterrey",
-      direccion: "Calle ABC, Colonia 321"
+      direccion: "Calle ABC, Colonia XYZ"
     }
   },
   {
     id: 4,
     nombres: "Alberto",
     apellidos: "Rodríguez",
-    telefono: "5628453561",
+    telefono: "777777777",
     ubicaciones: {
-      ciudad: "Ocotepeque",
-      direccion: "Avenida 456, Colonia 777"
+      ciudad: "Puebla",
+      direccion: "Avenida 456, Colonia ABC"
     }
   }
 ];
+
 
 // Función para añadir un nuevo contacto a la lista
 function agregarContacto(contacto) {
@@ -87,6 +88,11 @@ function imprimirContactos(titulo) {
 // Imprime la lista de contactos inicial:
 imprimirContactos("Lista de Contactos Iniciales");
 
+// Imprime la lista de contactos inicial:
+imprimirContactos("Lista de Contactos Iniciales");
+
+imprimirContactos();
+
 // Crear y agregar nuevos contactos a la lista
 let nuevoContacto1 = {
   id: 5,
@@ -115,6 +121,9 @@ agregarContacto(nuevoContacto2);
 
 // Imprime la lista de contactos actualizada:
 imprimirContactos("Lista de Contactos con Nuevos Agregados");
+
+imprimirContactos();
+
 
 // Supongamos que queremos actualizar el contacto con id 3 (Alejandro Gómez)
 const idContactoAActualizar = 3;
