@@ -71,7 +71,7 @@ function actualizarContacto(id, datosActualizados) {
 }
 
 function imprimirContactos(titulo) {
-  console.log("_____________________________");
+  console.log("____________________________");
   console.log(titulo);
   contactos.forEach(contacto => {
     console.log("ID: " + contacto.id);
@@ -81,7 +81,7 @@ function imprimirContactos(titulo) {
     console.log("Ubicaciones:");
     console.log("  Ciudad: " + contacto.ubicaciones.ciudad);
     console.log("  Dirección: " + contacto.ubicaciones.direccion);
-    console.log("------------------------------------");
+    console.log("----------------------------------");
   });
 }
 
@@ -124,8 +124,8 @@ const datosActualizados = {
   apellidos: "Gómez",
   telefono: "123456789",
   ubicaciones: {
-    ciudad: "Nueva Orleans",
-    direccion: "Calle Hola, Colonia HD"
+    ciudad: "Tegucigalpa",
+    direccion: "Calle sapito, Colonia Guadalupe"
   }
 };
 
