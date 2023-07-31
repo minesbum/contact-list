@@ -10,8 +10,8 @@ let contactos = [
     apellidos: "Bonilla",
     telefono: "123456789",
     ubicaciones: {
-      ciudad: "Ciudad de México",
-      direccion: "Calle 123, Colonia ABC"
+      ciudad: "Tegucigalpa",
+      direccion: "Calle 154, Colonia 999"
     }
   },
   {
@@ -46,6 +46,7 @@ let contactos = [
   }
 ];
 
+
 // Función para añadir un nuevo contacto a la lista
 function agregarContacto(contacto) {
   contactos.push(contacto);
@@ -69,9 +70,9 @@ function actualizarContacto(id, datosActualizados) {
 }
 
 // Función para imprimir en consola todos los detalles de los contactos presentes en la lista
-function imprimirContactos() {
+function imprimirContactos(titulo) {
   console.log("___________________");
-  console.log("Lista de contactos:");
+  console.log(titulo);
   contactos.forEach(contacto => {
     console.log("ID: " + contacto.id);
     console.log("Nombres: " + contacto.nombres);
@@ -85,6 +86,11 @@ function imprimirContactos() {
 }
 
 // Imprime la lista de contactos inicial:
+imprimirContactos("Lista de Contactos Iniciales");
+
+// Imprime la lista de contactos inicial:
+imprimirContactos("Lista de Contactos Iniciales");
+
 imprimirContactos();
 
 // Crear y agregar nuevos contactos a la lista
@@ -92,10 +98,10 @@ let nuevoContacto1 = {
   id: 5,
   nombres: "Mario",
   apellidos: "Bross",
-  telefono: "888888888",
+  telefono: "854736563",
   ubicaciones: {
-    ciudad: "Tokio",
-    direccion: "Calle 789, Colonia XYZ"
+    ciudad: "Italia",
+    direccion: "Calle 000, Colonia XD"
   }
 };
 
@@ -103,10 +109,10 @@ let nuevoContacto2 = {
   id: 6,
   nombres: "Luigi",
   apellidos: "Bross",
-  telefono: "999999999",
+  telefono: "84545656",
   ubicaciones: {
     ciudad: "Roma",
-    direccion: "Avenida 123, Colonia 456"
+    direccion: "Avenida Rico, Colonia 666"
   }
 };
 
@@ -114,25 +120,28 @@ agregarContacto(nuevoContacto1);
 agregarContacto(nuevoContacto2);
 
 // Imprime la lista de contactos actualizada:
+imprimirContactos("Lista de Contactos con Nuevos Agregados");
+
 imprimirContactos();
+
 
 // Supongamos que queremos actualizar el contacto con id 3 (Alejandro Gómez)
 const idContactoAActualizar = 3;
 const datosActualizados = {
   nombres: "Alex",
   apellidos: "Gómez",
-  telefono: "777777777",
+  telefono: "123456987",
   ubicaciones: {
-    ciudad: "Ciudad de México",
-    direccion: "Calle 789, Colonia XYZ"
+    ciudad: "Tegucigalpa",
+    direccion: "Calle 132, Colonia 3 de Mayo"
   }
 };
 
 actualizarContacto(idContactoAActualizar, datosActualizados);
 
 // Imprimimos la lista de contactos actualizada
-imprimirContactos();
+imprimirContactos("Lista de Contactos Después de la Actualización");
 
 // Supongamos que deseamos borrar el contacto con id 5 (Mario Bross)
 borrarContacto(5);
-imprimirContactos();
+imprimirContactos("Lista de Contactos Después de Borrar");
