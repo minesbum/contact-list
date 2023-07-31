@@ -61,12 +61,20 @@ let contactos = [
     }
   }
 
+
   // Función para actualizar un contacto existente en la lista
 function actualizarContacto(id, datosActualizados) {
   const indice = contactos.findIndex(contacto => contacto.id === id);
   if (indice !== -1) {
     // Actualizamos los datos del contacto con los nuevos datos proporcionados
     contactos[indice] = { ...contactos[indice], ...datosActualizados };
+=======
+  // Función para imprimir en consola los contactos presentes en la lista
+  function imprimirContactos() {
+    console.log("___________________");
+    console.log("Lista de contactos:");
+    contactos.forEach(contacto => console.log(contacto.nombres + " " + contacto.apellidos));
+
   }
 }
 
@@ -114,7 +122,34 @@ let nuevoContacto2 = {
 agregarContacto(nuevoContacto1);
 agregarContacto(nuevoContacto2);
 
+  // Crear y agregar nuevos contactos a la lista
+let nuevoContacto1 = {
+  id: 5,
+  nombres: "Mario",
+  apellidos: "Bross",
+  telefono: "555123321",
+  ubicaciones: {
+    ciudad: "Champiñon",
+    direccion: "Calle Hongo, Colonia XD"
+  }
+};
+
+let nuevoContacto2 = {
+  id: 6,
+  nombres: "Luigi",
+  apellidos: "Bross",
+  telefono: "555897414",
+  ubicaciones: {
+    ciudad: "Italia",
+    direccion: "Avenida 2020, Colonia LG"
+  }
+};
+
+agregarContacto(nuevoContacto1);
+agregarContacto(nuevoContacto2);
+
   // Imprime la lista de contactos con 2 adicionales:
+
   imprimirContactos("Lista de contactos mas los agregados");
 
   // Supongamos que queremos actualizar el contacto con id 3 (Alejandro Gómez)
@@ -137,4 +172,11 @@ imprimirContactos("Contactos después de la actualización");
   // Supongamos que deseamos borrar el contacto con id 5 "Mario Bross"
   borrarContacto(5);
   imprimirContactos("Contactos Después de Borrar");
+=======
+  imprimirContactos();
+  
+  // Supongamos que deseamos borrar el contacto con id 5 "Mario Bross"
+  borrarContacto(5);
+  imprimirContactos();
+
   
